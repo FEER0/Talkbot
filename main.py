@@ -21,9 +21,4 @@ async def on_ready():
                 break
             await channel.send(message)
 
-@bot.listen()
-async def on_message(message):
-    if message.author == bot.user or message.channel.id != channelID:
-        print(message.author.display_name + ": " + message.content)
-
 bot.run(settings.TOKEN)
